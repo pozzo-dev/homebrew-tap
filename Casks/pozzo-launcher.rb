@@ -1,9 +1,12 @@
 # Generato da tools/package_manifests.py nel workflow di release: le modifiche vanno fatte li'.
 cask "pozzo-launcher" do
-  version "0.20.0"
-  sha256 "988607a992a4faf1125b0767c968f8a31cc0fcfdc8512634df01965e80b0e4d9"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/pozzo-dev/Pozzo-Launcher/releases/download/v#{version}/PozzoLauncher-#{version}-macos-x64.dmg"
+  version "0.20.0"
+  sha256 arm:   "30dcfb354e06c0eb45b05db67246ccad3acc3cb471987be4128bbf02f43d72aa",
+         intel: "988607a992a4faf1125b0767c968f8a31cc0fcfdc8512634df01965e80b0e4d9"
+
+  url "https://github.com/pozzo-dev/Pozzo-Launcher/releases/download/v#{version}/PozzoLauncher-#{version}-macos-#{arch}.dmg"
   name "Pozzo Launcher"
   desc "Game library for ROMs and PC games from the stores, with covers and metadata"
   homepage "https://github.com/pozzo-dev/Pozzo-Launcher"
@@ -15,7 +18,6 @@ cask "pozzo-launcher" do
 
   # l'app si aggiorna da sola (Impostazioni > Info): brew non la riporta indietro
   auto_updates true
-  depends_on arch: :x86_64
   depends_on macos: ">= :big_sur"
 
   app "PozzoLauncher.app"
