@@ -2,9 +2,9 @@
 cask "pozzo-launcher" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.20.1"
-  sha256 arm:   "b2bca34f689ec9a4accaf4d6a09caa778c593398269fbcada1b050895a72392e",
-         intel: "9c590478fe9feff52985a0cf7c88ed7dfc2d7072e08626354c4fd6ef7615a67b"
+  version "0.20.2"
+  sha256 arm:   "54078e2bcd441c289726a78465326d1cfd3cff7c3d42b5625df863b6720e2f4c",
+         intel: "81735e035b3a1b3d05ba786e5d122421eb995ede27f26d4677ce5a5f45631ab8"
 
   url "https://github.com/pozzo-dev/Pozzo-Launcher/releases/download/v#{version}/PozzoLauncher-#{version}-macos-#{arch}.dmg"
   name "Pozzo Launcher"
